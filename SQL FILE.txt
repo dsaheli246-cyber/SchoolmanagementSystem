@@ -1,0 +1,99 @@
+
+
+mysql> CREATE TABLE student (
+    ->     id INT PRIMARY KEY AUTO_INCREMENT,
+    ->     name VARCHAR(100),
+    ->     age INT,
+    ->     course VARCHAR(50)
+    -> );
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> desc student;
++--------+--------------+------+-----+---------+----------------+
+| Field  | Type         | Null | Key | Default | Extra          |
++--------+--------------+------+-----+---------+----------------+
+| id     | int          | NO   | PRI | NULL    | auto_increment |
+| name   | varchar(100) | YES  |     | NULL    |                |
+| age    | int          | YES  |     | NULL    |                |
+| course | varchar(50)  | YES  |     | NULL    |                |
++--------+--------------+------+-----+---------+----------------+
+4 rows in set (0.02 sec)
+
+mysql> CREATE TABLE teacher(id INT PRIMARY KEY AUTO_INCREMENT,name VARCHAR(100),subject VARCHAR(100),salary INT);
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> desc teacher;
++---------+--------------+------+-----+---------+----------------+
+| Field   | Type         | Null | Key | Default | Extra          |
++---------+--------------+------+-----+---------+----------------+
+| id      | int          | NO   | PRI | NULL    | auto_increment |
+| name    | varchar(100) | YES  |     | NULL    |                |
+| subject | varchar(100) | YES  |     | NULL    |                |
+| salary  | int          | YES  |     | NULL    |                |
++---------+--------------+------+-----+---------+----------------+
+4 rows in set (0.00 sec)
+
+mysql> CREATE TABLE staff(id INT PRIMARY KEY AUTO_INCREMENT,name VARCHAR(100),age INT,salary INT);
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> desc staff;
++--------+--------------+------+-----+---------+----------------+
+| Field  | Type         | Null | Key | Default | Extra          |
++--------+--------------+------+-----+---------+----------------+
+| id     | int          | NO   | PRI | NULL    | auto_increment |
+| name   | varchar(100) | YES  |     | NULL    |                |
+| age    | int          | YES  |     | NULL    |                |
+| salary | int          | YES  |     | NULL    |                |
++--------+--------------+------+-----+---------+----------------+
+4 rows in set (0.00 sec)
+
+mysql> select *from student;
++----+--------+------+--------+
+| id | name   | age  | course |
++----+--------+------+--------+
+|  1 | Saheli |   21 | DBMS   |
+|  2 | Rima   |   19 | DAA    |
+|  3 | Rimi   |   20 | HTML   |
+|  4 | Sana   |   19 | DSA    |
+|  5 | Sima   |   18 | DAA    |
++----+--------+------+--------+
+5 rows in set (0.00 sec)
+
+
+
+mysql> select *from staff;
++----+--------+------+--------+
+| id | name   | age  | salary |
++----+--------+------+--------+
+|  1 | Ankita |   35 |   5000 |
+|  2 | Rita   |   45 |   7000 |
+|  3 | Sila   |   39 |   9000 |
++----+--------+------+--------+
+3 rows in set (0.01 sec)
+
+
+
+mysql> CREATE TABLE teacher(id INT PRIMARY KEY AUTO_INCREMENT,name VARCHAR(100),subject VARCHAR(100),salary INT);
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> desc teacher;
++---------+--------------+------+-----+---------+----------------+
+| Field   | Type         | Null | Key | Default | Extra          |
++---------+--------------+------+-----+---------+----------------+
+| id      | int          | NO   | PRI | NULL    | auto_increment |
+| name    | varchar(100) | YES  |     | NULL    |                |
+| subject | varchar(100) | YES  |     | NULL    |                |
+| salary  | int          | YES  |     | NULL    |                |
++---------+--------------+------+-----+---------+----------------+
+4 rows in set (0.00 sec)
+
+mysql> select *from teacher;
++----+------+---------+--------+
+| id | name | subject | salary |
++----+------+---------+--------+
+|  1 | Osmi | Python  |  38000 |
+|  2 | Eti  | DSA     |  23000 |
++----+------+---------+--------+
+2 rows in set (0.00 sec)
+
+mysql>
